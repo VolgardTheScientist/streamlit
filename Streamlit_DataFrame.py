@@ -92,10 +92,10 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-df = pd.read_pickle("https://github.com/VolgardTheScientist/streamlit/blob/e7b8dbcc502f12ab4dddaae64fcb9401f51a9031/df_concrete2.pkl")
+df = pd.read_pickle("C:/Users/pp/Downloads/df_concrete2.pkl")
 df.rename(columns = {'Component Quantities.Schicht/Komponenten Volumen (brutto)':'Volume'}, inplace = True)
-df["Volume"] = 1000000 * df["Volume"]
-df["Volume"] = df['Volume'].astype(int)
+#df["Volume"] = 1000000 * df["Volume"]
+df["Volume"] = df['Volume'].astype(float)
 #df = df.set_index("GlobalID")
 #df=df.astype(str)
 
